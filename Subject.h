@@ -19,11 +19,11 @@ public:
 };
 
 //наследуем методы из класса Subject
-class FileMonitor: public Subject {
+class FileConcreteSubject: public Subject {
 private:
     File prev_state;
 public:
-    FileMonitor(string _name);
+    FileConcreteSubject(string _name);
     void checkFile();
     void Change(bool existence, long size);
 };
