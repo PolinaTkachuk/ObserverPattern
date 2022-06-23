@@ -7,14 +7,14 @@
 using namespace std;
 //Класс- наблюдатель, следим за файлом
 
-class IObserver
+class IObserver// интерфейс, с методом вызывающимся при кажном изменении
 {
 public:
-    virtual void Update(bool existence, long size) = 0; //обновление существования и размера файла
+    virtual void Update(bool existence, long size) = 0; //объявл виртуально,обновление существования и размера файла
 };
 
 
-class FileObserver: IObserver
+class FileObserver: IObserver //выпол действия в ответ на оповещения
 {
 private:
     long last_size = -1;
